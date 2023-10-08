@@ -7,7 +7,7 @@ const Comments = ({ id, comments }) => {
   const renderComments = () => {
     if (comments?.result.length === 0) return;
     //@ts-ignore
-    return comments?.result.map((v) => <div>{v.content}</div>);
+    return comments?.result.map((v, idx) => <div key={idx}>{v.content}</div>);
   };
   return (
     <>

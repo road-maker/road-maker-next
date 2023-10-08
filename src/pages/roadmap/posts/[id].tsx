@@ -5,15 +5,18 @@ import RoadmapGraph from "@/app/components/roadmap/graph";
 import { baseUrl } from "@/axiosInstance/constants";
 import axios from "axios";
 import type { GetServerSideProps } from "next";
+import "./roadmap.css";
 //@ts-ignore
 const Post = ({ posts, comments }) => {
-  // console.log("posts", posts);
+  console.log("posts", posts);
   // debugger;
   return (
     <BaseLayout>
       <h1>this is roadmap post detail page</h1>
       <RoadmapDescription posts={posts} />
-      <RoadmapGraph edges={posts?.edges} nodes={posts?.nodes} />
+      <section className="wrap">
+        <RoadmapGraph edges={posts?.edges} nodes={posts?.nodes} />
+      </section>
       <Comments id={posts?.id} comments={comments} />
     </BaseLayout>
   );
