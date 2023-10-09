@@ -1,12 +1,14 @@
 "use client";
 import BaseLayout from "./components/layouts/BaseLayout";
+import Skeletons from "./components/shared/skeletons";
 
-export default function Home() {
-
+export default function Main() {
   return (
     <>
       <BaseLayout>
-        <h1>I am Home page</h1>
+        <div id="skeleton">
+          <Skeletons />
+        </div>
       </BaseLayout>
     </>
   );

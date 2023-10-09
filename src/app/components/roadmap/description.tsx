@@ -14,16 +14,12 @@ const RoadmapDescription = ({ posts }) => {
         <p>{posts.description}</p>
         <p>{posts.createdAt}</p>
         <p>{posts.createdAt}</p>
-        <p>
-          {posts.isJoined ? <Button>참여중</Button> : <Button>참여하기</Button>}
-        </p>
-        <p>
-          {posts.isLiked ? (
-            <Button>🩷{posts.likeCount}</Button>
-          ) : (
-            <Button>🤍{posts.likeCount}</Button>
-          )}
-        </p>
+        {posts.isJoined ? <Button>참여중</Button> : <Button>참여하기</Button>}
+        {posts.isLiked ? (
+          <Button>🩷{posts.likeCount}</Button>
+        ) : (
+          <Button>🤍{posts.likeCount}</Button>
+        )}
       </div>
     </>
   );
