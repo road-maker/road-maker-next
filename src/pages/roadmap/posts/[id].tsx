@@ -8,11 +8,8 @@ import type { GetServerSideProps } from "next";
 import "./roadmap.css";
 //@ts-ignore
 const Post = ({ posts, comments }) => {
-  console.log("posts", posts);
-  // debugger;
   return (
     <BaseLayout>
-      <h1>this is roadmap post detail page</h1>
       <RoadmapDescription posts={posts} />
       <section className="wrap">
         <RoadmapGraph edges={posts?.edges} nodes={posts?.nodes} />

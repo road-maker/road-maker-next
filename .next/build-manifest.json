@@ -25,15 +25,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/roadmap/posts": [
+    "/roadmap/posts/search/[id]": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/roadmap/posts.js"
-    ],
-    "/roadmap/posts/[id]": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/roadmap/posts/[id].js"
+      "static/chunks/pages/roadmap/posts/search/[id].js"
     ]
   },
   "ampFirstPages": []

@@ -21,7 +21,6 @@ const Posts = ({ posts }) => {
   };
   return (
     <BaseLayout>
-      <h1>this is roadmap post page</h1>
       <ul>{renderRoadmapPosts()}</ul>
       {/* <Skeleton height={50} circle mb="xl" />
       <Skeleton height={8} radius="xl" />
@@ -59,7 +58,8 @@ export const getServerSideProps = (async (context) => {
   try {
     // const res = await axios.get(`${baseUrl}/roadmaps/search/${}?page=${1}&size=5`)
     const res = await axios.get(
-      `${baseUrl}/roadmaps/search/자바?page=${1}&size=5`
+      `${baseUrl}/roadmaps?page=1&order-type=recent`
+      // `${baseUrl}/roadmaps/search/자바?page=${1}&size=5`
     );
     posts = res.data;
   } catch (e) {

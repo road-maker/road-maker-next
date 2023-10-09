@@ -11,8 +11,7 @@ const SearchBar = () => {
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter") {
       if (searchContent.split("").filter((v) => v !== " ").length > 0) {
-        alert("검색!");
-        router.replace(`/roadmap/posts`);
+        router.replace(`/roadmap/posts/search/${searchContent}`);
       } else {
         alert("검색어를 입력해주세요.");
         setSearchContent("");

@@ -5,6 +5,7 @@ const Comments = ({ id, comments }) => {
   //   console.log([id, comments]);
   //   debugger;
   const renderComments = () => {
+    if (!comments?.result) return;
     if (comments?.result.length === 0) return;
     //@ts-ignore
     return comments?.result.map((v, idx) => <div key={idx}>{v.content}</div>);
