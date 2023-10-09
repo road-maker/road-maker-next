@@ -7,6 +7,8 @@ import Link from "next/link";
 //@ts-ignore
 const Posts = ({ posts }) => {
   const renderRoadmapPosts = () => {
+    // console.log(posts);
+    // debugger;
     //@ts-ignore
     return posts?.result?.map((post) => (
       <li key={post.id}>
