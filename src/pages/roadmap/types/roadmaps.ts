@@ -12,7 +12,7 @@ export interface RoadmapPost {
   id: number;
   title: string;
   edges: Array<Edge>;
-  nodes: Array<Node>;
+  nodes: Array<GraphNode>;
   description: string;
   thumbnailUrl: URL;
   likeCount: number;
@@ -47,7 +47,7 @@ type NodeStyle = {
   fontSize: number;
 };
 
-export interface Node {
+export interface GraphNode {
   id: string;
   blogKeyword?: BlogKeyword;
   data: NodeLabel;

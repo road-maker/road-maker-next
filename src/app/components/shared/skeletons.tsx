@@ -6,9 +6,7 @@ export default function Skeletons() {
   useEffect(() => {
     setElement(document.getElementById("skeleton"));
   }, []);
-  if (!element) {
-    return <></>;
-  }
+
   const renderSkeletons = () => {
     const skeleton = (i: number) => (
       <Card key={`${i}`}>
@@ -37,6 +35,9 @@ export default function Skeletons() {
       .map((v, i) => (v = skeleton(i)));
     return arr;
   };
+  if (element) {
+    return <></>;
+  }
   return (
     <>
       <SimpleGrid cols={4} style={{ width: "100%" }}>

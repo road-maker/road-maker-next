@@ -1,16 +1,16 @@
 .wrap {
-  /* height: 64vh; */
   height: 100vh;
 }
 .node {
   width: 100%;
-  /* max-width: 240px; */
-  font-size: 24px;
+  max-width: 240px;
+  /* font-size: 24px; */
   /* width: 7rem; */
   /* height: 64vh; */
   border-radius: 1rem;
   border: 0.3rem solid #000;
   padding: 10px;
+  font-size: 1rem;
   box-sizing: border-box;
 }
 .node:hover {
@@ -28,6 +28,10 @@
 .react-flow__node .react-flow__node-custom .nopan .selectable {
   max-width: 240px;
 }
-.react-flow__edge {
+/* .react-flow__edge {
   stroke-width: 60px !important;
+} */
+.react-flow__viewport react-flow__container {
+  transform: translate(-50%, 50%) scale(0.5) !important;
+  overflow: visible;
 }

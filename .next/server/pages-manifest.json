@@ -3,5 +3,7 @@
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
   "/roadmap/posts/search/[id]": "pages/roadmap/posts/search/[id].js",
-  "/roadmap/posts/[id]": "pages/roadmap/posts/[id].js"
+  "/roadmap/posts/[id]": "pages/roadmap/posts/[id].js",
+  "/roadmap/posts": "pages/roadmap/posts.js",
+  "/login": "pages/login.js"
 }

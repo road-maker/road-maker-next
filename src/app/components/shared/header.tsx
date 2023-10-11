@@ -5,13 +5,15 @@ import SearchBar from "./searchbar";
 const Header = () => {
   return (
     <>
-      <Button component={Link} href="/">
-        HOME
-      </Button>
-      <SearchBar />
-      <Button component={Link} href="/login">
-        LOGIN
-      </Button>
+      <nav className="nav">
+        <Button component={Link} href="/">
+          HOME
+        </Button>
+        <SearchBar />
+        <Button component={Link} href="/login">
+          LOGIN
+        </Button>
+      </nav>
       {/* <Button component={Link} href="/">
         HOME
       </Button>

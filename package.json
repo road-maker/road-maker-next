@@ -35,7 +35,13 @@
     "@mantine/spotlight": "^7.1.2",
     "@mantine/tiptap": "^7.1.2",
     "@tabler/icons-react": "^2.38.0",
+    "@tiptap/extension-highlight": "^2.1.11",
     "@tiptap/extension-link": "^2.1.11",
+    "@tiptap/extension-subscript": "^2.1.11",
+    "@tiptap/extension-superscript": "^2.1.11",
+    "@tiptap/extension-text-align": "^2.1.11",
+    "@tiptap/extension-underline": "^2.1.11",
+    "@tiptap/extension-youtube": "^2.1.11",
     "@tiptap/pm": "^2.1.7",
     "@tiptap/react": "^2.1.11",
     "@tiptap/starter-kit": "^2.1.11",
@@ -55,6 +61,7 @@
     "reactflow": "^11.8.3",
     "storybook": "^7.4.0",
     "styled-components": "^6.0.7",
+    "tiptap": "^1.32.2",
     "typescript": "5.2.2"
   },
   "devDependencies": {
