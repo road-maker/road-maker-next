@@ -1,5 +1,5 @@
 import dagre from "@dagrejs/dagre";
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import {
   Background,
   ReactFlow,
@@ -12,9 +12,6 @@ import { ResizableNodeSelected } from "./customNodes/fixedNodes";
 import NodeDetail from "./nodeDetail";
 
 const proOptions = { hideAttribution: true };
-const nodeTypes = {
-  custom: ResizableNodeSelected,
-};
 
 const dagreGraph = new dagre.graphlib.Graph();
 dagreGraph.setDefaultEdgeLabel(() => ({}));
@@ -23,38 +20,46 @@ dagreGraph.setDefaultEdgeLabel(() => ({}));
 const RoadmapGraph = ({ edges, nodes }) => {
   const [node, setNodes, onNodesChange] = useNodesState(nodes);
   const [edge, setEdges, onEdgesChange] = useEdgesState(edges);
-  const [zoomOnScroll, setZoomOnScroll] = useState(false);
+  const [nodeDetail, setNodeDetail] = useState({});
   const [isSelectable] = useState(true);
   const [isOpen, setIsOpen] = useState(false);
+  const nodeTypes = useMemo(
+    () => ({
+      custom: ResizableNodeSelected,
+    }),
+    []
+  );
   //   console.log([edges, nodes]);
   //   debugger;
   return (
     <>
-      <NodeDetail isOpen={isOpen} setIsOpen={setIsOpen} />
+      <NodeDetail
+        isOpen={isOpen}
+        setIsOpen={setIsOpen}
+        nodeDetail={nodeDetail}
+      />
       <ReactFlowProvider>
         <ReactFlow
+          preventScrolling={false}
           nodes={node}
           edges={edge}
-          attributionPosition="top-right"
+          zoomOnScroll={false}
           proOptions={proOptions}
-          zoomOnScroll={zoomOnScroll}
+          zoomOnPinch={false}
+          zoomOnDoubleClick={false}
           elementsSelectable={isSelectable}
-          // nodesConnectable={isConnectable}
-          nodesDraggable={zoomOnScroll}
-          panOnScroll={zoomOnScroll}
-          // zoomOnDoubleClick={zoomOnDoubleClick}
-          panOnDrag={zoomOnScroll}
-          // minZoom={0.2}
-          // maxZoom={4}
           nodeTypes={nodeTypes}
+          snapToGrid={true}
           onNodeClick={(e, nodeInfo) => {
             setIsOpen(true);
-            console.log(nodeInfo);
-            debugger;
+            // console.log(nodeInfo);
+            setNodeDetail(nodeInfo);
+            // debugger;
           }}
-          fitView
+          fitView={true}
           style={{
             backgroundColor: "#e5e7eb",
+            cursor: "default",
           }}
         >
           <Background gap={16} />

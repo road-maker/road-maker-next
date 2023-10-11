@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Input } from "@mantine/core";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-
+import "./style.css";
 const SearchBar = () => {
   const [searchContent, setSearchContent] = useState("");
   const router = useRouter();
@@ -32,6 +32,8 @@ const SearchBar = () => {
 
   return (
     <Input
+      id="searchBar"
+      className="w60"
       placeholder="로드맵 검색어를 입력해주세요."
       rightSection={searchIcon}
       value={searchContent}

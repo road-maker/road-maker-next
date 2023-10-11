@@ -3,28 +3,16 @@
   margin: 0;
   padding: 0;
 }
-.node {
-  /* width: 100%; */
-  max-width: 240px;
-  font-size: 24px;
-  /* width: 7rem; */
-  height: 100%;
-  border-radius: 15px;
-  border: 1px solid #000;
-  background-color: #fff;
-  padding: 20px;
-  box-sizing: border-box;
+.slide {
+  height: 100vh;
+  width: 100%;
 }
-
-.node :global .react-flow__resize-control.handle {
-  width: 10px;
-  height: 10px;
-  border-radius: 100%;
+.magenta {
+  background-color: magenta;
 }
-
-.react-flow__node .react-flow__node-custom .nopan .selectable {
-  max-width: 240px;
+.purple {
+  background-color: purple;
 }
-.react-flow__node .react-flow__node-custom .nopan .selectable {
-  max-width: 240px;
+.green {
+  background-color: green;
 }
