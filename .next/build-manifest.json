@@ -34,11 +34,6 @@
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/roadmap/posts/[id].js"
-    ],
-    "/roadmap/posts/search/[id]": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/roadmap/posts/search/[id].js"
     ]
   },
   "ampFirstPages": []
