@@ -14,8 +14,7 @@
 
 ## 목차
 1. [프로젝트 개요](#overview)
-2. [서비스 소개](#intro)<!--3. [트러블 슈팅 및 해결 과정](#issue)
-4. [프로젝트 아키텍처](#frontend)-->
+2. [서비스 소개](#intro) <!--3. [트러블 슈팅 및 해결 과정](#issue) 4. [프로젝트 아키텍처](#frontend)-->
 3. [프로젝트 포스터](#poster)
 4. [커밋 컨벤션](#commit-convention)
 
@@ -77,7 +76,7 @@ RoadMaker는 사용자가 자신만의 개발 로드맵을 쉽게 만들고 공�
 
 ![ROADMAKER POSTER](https://github.com/road-maker/road-maker-spring/assets/60874549/03e43fc1-e4ed-46ed-8330-d74cd11ff934)
 
-<a id="commit-convention></a>
+<a id="commit-convention"></a>
 ## 6. 커밋 컨벤션
 
 본 프로젝트에서는 AngularJS commit Convention을 채택했습니다.
