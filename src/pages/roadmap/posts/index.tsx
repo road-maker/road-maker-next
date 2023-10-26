@@ -37,8 +37,6 @@ export default Posts;
 //     );
 //     posts = res.data;
 //   } catch (e) {
-//     console.log(e);
-//     console.log("cannot fetch roadmaps");
 //     debugger;
 //   }
 //   return { posts: posts };
@@ -59,8 +57,7 @@ export const getServerSideProps = (async (context) => {
     );
     posts = res.data;
   } catch (e) {
-    console.log(e);
-    console.log("cannot fetch roadmaps");
+    console.log("cannot fetch roadmaps", e);
     debugger;
   }
   // return { posts: posts };

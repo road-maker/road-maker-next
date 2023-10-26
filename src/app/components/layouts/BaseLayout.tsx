@@ -1,3 +1,4 @@
+import AuthProvider from "../auth/provider";
 import Footer from "../shared/footer";
 import Header from "../shared/header";
 type Props = {
@@ -6,9 +7,11 @@ type Props = {
 const BaseLayout = ({ children }: Props) => {
   return (
     <>
-      <Header />
-      {children}
-      <Footer />
+      <AuthProvider>
+        <Header />
+        {children}
+        <Footer />
+      </AuthProvider>
     </>
   );
 };

@@ -4,7 +4,6 @@ import { Button } from "@mantine/core";
 
 //@ts-ignore;
 const RoadmapDescription = ({ posts }) => {
-  //   console.log(posts);
   //   debugger;
   return (
     <>

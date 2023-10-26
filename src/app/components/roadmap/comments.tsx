@@ -2,7 +2,6 @@
 
 //@ts-ignore
 const Comments = ({ id, comments }) => {
-  //   console.log([id, comments]);
   //   debugger;
   const renderComments = () => {
     if (!comments?.result) return;
