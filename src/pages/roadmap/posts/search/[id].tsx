@@ -7,7 +7,6 @@ import Link from "next/link";
 //@ts-ignore
 const Posts = ({ posts }) => {
   const renderRoadmapPosts = () => {
-    console.log(posts);
     debugger;
     //@ts-ignore
     return posts?.result?.map((post) => (
@@ -27,7 +26,6 @@ export default Posts;
 
 export const getServerSideProps = (async (context) => {
   let posts = [];
-  // console.log(context?.query?.id);
   // debugger;
   try {
     const res = await axios.get(
@@ -36,8 +34,7 @@ export const getServerSideProps = (async (context) => {
     );
     posts = res.data;
   } catch (e) {
-    console.log(e);
-    console.log("cannot fetch roadmaps");
+    console.log("cannot fetch roadmaps", e);
     debugger;
   }
   // return { posts: posts };

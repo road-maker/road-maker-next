@@ -29,7 +29,6 @@ const RoadmapGraph = ({ edges, nodes }) => {
     }),
     []
   );
-  //   console.log([edges, nodes]);
   //   debugger;
   return (
     <>
@@ -52,7 +51,6 @@ const RoadmapGraph = ({ edges, nodes }) => {
           snapToGrid={true}
           onNodeClick={(e, nodeInfo) => {
             setIsOpen(true);
-            // console.log(nodeInfo);
             setNodeDetail(nodeInfo);
             // debugger;
           }}

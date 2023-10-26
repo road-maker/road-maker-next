@@ -8,8 +8,6 @@ import type { GetServerSideProps } from "next";
 import "./roadmap.css";
 //@ts-ignore
 const Post = ({ posts, comments }) => {
-  // console.log(posts);
-  // console.log(comments);
   // debugger;
   return (
     <BaseLayout>
@@ -31,8 +29,6 @@ export const getServerSideProps = (async ({ query }) => {
     const res = await axios.get(`${baseUrl}/roadmaps/${query?.id}`);
     posts = res.data;
   } catch (e) {
-    console.log(e);
-    console.log("cannot fetch roadmaps");
     debugger;
   }
   try {
@@ -41,8 +37,7 @@ export const getServerSideProps = (async ({ query }) => {
     );
     comments = res.data;
   } catch (e) {
-    console.log(e);
-    console.log("cannot fetch comments");
+    console.log("cannot fetch comments",e);
     debugger;
   }
   return { props: { posts, comments } };

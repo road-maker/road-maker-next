@@ -3,6 +3,6 @@
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
   "/roadmap/posts/search/[id]": "pages/roadmap/posts/search/[id].js",
-  "/roadmap/posts/[id]": "pages/roadmap/posts/[id].js",
-  "/login": "pages/login.js"
+  "/users/signin": "pages/users/signin.js",
+  "/users/mypage": "pages/users/mypage.js"
 }
